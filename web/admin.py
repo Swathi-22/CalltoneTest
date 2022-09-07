@@ -15,19 +15,21 @@ class productAdmin(admin.ModelAdmin):
 class categoryAdmin(admin.ModelAdmin):
     list_display = ('id','category','category_image')
     search_fields = ['id','category']
-  
+    prepopulated_fields = {'slug':('category',)}
+    
    
   
 
 
 class modelsAdmin(admin.ModelAdmin):
-    list_display = ('id','brand','category','model_name')
+    list_display = ('id','brand','model_name')
     search_fields = ['id','brand']
+    prepopulated_fields = {'slug':('model_name',)}
  
 class brandAdmin(admin.ModelAdmin):
     list_display = ('id','brand_name')
     search_fields = ['id','category']
-
+    prepopulated_fields = {'slug':('brand_name',)}
 
 class cartAdmin(admin.ModelAdmin):
     list_display = ('id','session_key','product')

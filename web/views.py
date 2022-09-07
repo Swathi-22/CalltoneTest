@@ -40,9 +40,11 @@ def product_details_view(request,category):
     cartLength = models.cart.objects.filter(session_key= request.session.session_key).count()
     cId = categoryId.id
     # category = models.category.objects.all()
+    
     brand = models.brand.objects.all()
+    producut_model=models.product_model.objects.all()
     products = models.product.objects.filter(category_id = categoryId.id)
-    return HttpResponse(template.render({'brand':brand,'product':products,'cart_length':cartLength,'category':cId,'category_name':category,'sessionKey':request.session.session_key},request))
+    return HttpResponse(template.render({'producut_model':producut_model,'brand':brand,'product':products,'cart_length':cartLength,'category':cId,'category_name':category,'sessionKey':request.session.session_key},request))
 
 
 def cart(request):

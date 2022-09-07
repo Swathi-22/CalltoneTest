@@ -39,9 +39,9 @@
 
                             <select name="" id="brand" class="form-control notranslate"  >Brand
                                 <option selected>اختيار  الشركة</option>
-                                <option value="0">All</option>
+                                <option value="*">All</option>
                                 {% for i in brand %}
-                                <option value="{{i.id}}">{{i.brand_name}}</option>
+                                <option value="{{i.slug}}">{{i.brand_name}}</option>
 
 
                                 {% endfor %}
@@ -53,7 +53,11 @@
                     <div class="col-6">
                         <select class="form-control notranslate"  name="" id="model">Model
                             <option value="0" selected >اختيار الموديل</option>
+                            {% for i in producut_model %}
+                                <option value="{{i.slug}}">{{i.model_name}}</option>
 
+
+                                {% endfor %}
                         </select>
                     </div>
                 </div>

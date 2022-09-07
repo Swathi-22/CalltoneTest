@@ -15,7 +15,7 @@ $("#brand").change(function () {
 
     $.ajax({
 
-        url: 'https://calltone-ksa.com/core/model/',
+        url: '/core/model/',
         type: 'POST',
         data: data,
         success: function (response) {
@@ -94,7 +94,7 @@ $("#model").change(function () {
     var model = $(this).val();
     var brand = $("#brand").val();
     var category = $("#category").val();
-    var category = $("#category").val();
+    // var category = $("#category").val();
 
     var csrftoken = $('[name="csrfmiddlewaretoken"]').val();
     data = {
@@ -106,7 +106,7 @@ $("#model").change(function () {
 
     $.ajax({
 
-        url: 'https://calltone-ksa.com/core/images/',
+        url: '/core/images/',
         type: 'POST',
         data: data,
         success: function (response) {
@@ -173,7 +173,7 @@ function btnCart(productId, thisProp) {
 
     $.ajax({
 
-        url: 'https://calltone-ksa.com/core/cart/',
+        url: '/core/cart/',
         type: 'POST',
         data: data,
         beforeSend: function () {

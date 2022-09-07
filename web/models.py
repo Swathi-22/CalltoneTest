@@ -3,9 +3,12 @@ from versatileimagefield.fields import VersatileImageField, PPOIField
 
 class category(models.Model):
     
-    category = models.CharField(max_length=100,null=False,unique=True)
+    category = models.CharField(max_length=100,null=False)
     category_image = VersatileImageField(upload_to = 'category_image',ppoi_field='image_ppoi',blank =True)
     image_ppoi    = PPOIField()
+    slug=models.SlugField(unique=True)
+    is_category=models.BooleanField(default=True)
+
 
 
     def __str__(self):
@@ -14,8 +17,9 @@ class category(models.Model):
 
 
 class brand(models.Model):
-
+   
     brand_name = models.CharField(max_length=50)
+    slug=models.SlugField(unique=True)
 
     
     def __str__(self):
@@ -26,6 +30,7 @@ class product_model(models.Model):
     category = models.ForeignKey(category,on_delete=models.CASCADE)
     brand = models.ForeignKey(brand,on_delete=models.CASCADE,)
     model_name = models.CharField(max_length=50)
+    slug=models.SlugField(unique=True)
 
     def __str__(self):
         return self.model_name
@@ -43,6 +48,7 @@ class product(models.Model):
     product_image = VersatileImageField(upload_to = 'product_image',ppoi_field='image_ppoi',blank =True)
     image_ppoi    = PPOIField()
     price = models.IntegerField()
+    
 
     def __str__(self):
         return self.product_name

@@ -7,9 +7,9 @@ class ContactForms(forms.ModelForm):
         model=Contact
         fields='__all__'
         widgets={
-            'name':TextInput(attrs={'placeholder':"Your name here", 'name':"name"}),
-            'phone':TextInput(attrs={'placeholder':"Your phone here",'name':"phone"}),
-            'email':TextInput(attrs={'placeholder':"Your email here",'name':"email"}),
-            'subject':TextInput(attrs={'placeholder':"Subject here",'name':"subject"}),
-            'message':Textarea(attrs={'placeholder':"Message",'class':"custom-textarea",'name':"message",'rows':"3"}),
+            'name':TextInput(attrs={'placeholder':"اسمك هنا", 'name':"name"}),
+            'phone':TextInput(attrs={'placeholder':"هاتفك هنا",'name':"phone"}),
+            'email':TextInput(attrs={'placeholder':"بريدك الإلكتروني هنا",'name':"email"}),
+            'subject':TextInput(attrs={'placeholder':"الموضوع هنا",'name':"subject"}),
+            'message':Textarea(attrs={'placeholder':"رسالة",'class':"custom-textarea",'name':"message",'rows':"3"}),
          }  
