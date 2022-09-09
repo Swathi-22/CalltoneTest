@@ -55,8 +55,6 @@ def select_model(request):
                     'price': j.price
                 }
                 products.append(data1)
-            for i in products:
-                print(i)
     except:
         pass
     return JsonResponse({'data': a, 'product': products})
@@ -88,6 +86,8 @@ def select_model_based_images(request):
             print(a)
         
     except Exception as e:
+        print
+        (e)
         pass
     return JsonResponse({'data': a})
 

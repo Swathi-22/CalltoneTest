@@ -39,9 +39,9 @@
 
                             <select name="" id="brand" class="form-control notranslate"  >Brand
                                 <option selected>اختيار  الشركة</option>
-                                <option value="*">All</option>
+                                <option value="0">All</option>
                                 {% for i in brand %}
-                                <option value="{{i.slug}}">{{i.brand_name}}</option>
+                                <option value="{{i.id}}">{{i.brand_name}}</option>
 
 
                                 {% endfor %}
@@ -54,7 +54,7 @@
                         <select class="form-control notranslate"  name="" id="model">Model
                             <option value="0" selected >اختيار الموديل</option>
                             {% for i in producut_model %}
-                                <option value="{{i.slug}}">{{i.model_name}}</option>
+                                <option value="{{i.id}}">{{i.model_name}}</option>
 
 
                                 {% endfor %}
@@ -66,9 +66,9 @@
                 <div class="tab-content" id="product-list">
                     <!-- popular-product start -->
                     <div id="popular-product" class="tab-pane active show">
-                        <div class="row">
+                        <div class="row"  id="viewImageDiv">
                             {% for i in product %}
-                            <div class="col-lg-3 col-6" id="viewImageDiv">
+                            <div class="col-lg-3 col-6" >
                                 <div class="product-item product-item-2">
                                     <div id="viewImage" class="product-img">
                                         <a href="#product">

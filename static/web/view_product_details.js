@@ -3,7 +3,6 @@ $("#brand").change(function () {
 
     var brand = $(this).val();
     var category = $("#category").val();
-
     var csrftoken = $('[name="csrfmiddlewaretoken"]').val();
 
 
@@ -47,12 +46,12 @@ $("#brand").change(function () {
             var arrayLength = Object.keys(myArray).length
 
             if (arrayLength > 0) {
-                $('#rowImageViewDiv').empty();
+                $('#viewImageDiv').empty();
 
 
                 $.each(myArray, function (i) {
 
-                    target = $('#rowImageViewDiv'),
+                    target = $('#viewImageDiv'),
                         html = ''
                     html = '<div class="col-lg-3 col-6">';
                     html += '<div class="product-item product-item-2">';
@@ -110,43 +109,41 @@ $("#model").change(function () {
         type: 'POST',
         data: data,
         success: function (response) {
+            console.log(response)
+            var data = [];
+            data = response['data']
 
-            var myArray = [];
-            myArray = response['data']
-
-            var arrayLength = Object.keys(myArray).length
-
+            var arrayLength = Object.keys(data).length
             if (arrayLength > 0) {
-                $('#rowImageViewDiv').empty();
+                $('#viewImageDiv').empty();
 
 
-                $.each(myArray, function (i) {
+                $.each(data, function (i) {
 
-                    target = $('#rowImageViewDiv');
-                    html = '';
+                    target = $('#viewImageDiv');
+
+                    var html = ''
                     html = '<div class="col-lg-3 col-6">';
-                    html += '<div class="product-item product-item-2">';
+                    html += '<div class="product-item product-item-2">'
                     html += '<div id="viewImage" class="product-img">'
                     html += '<a href="#product">'
-                    html += '<img  src="' + myArray[i].image + '" alt="" />'
-                    '</a>';
-                    '</div>';
+                    html += '<img src="' + data[i].image + '" alt="" />'
+                    html += '</a>'
+                    html += '</div>'
                     html += '<div class="product-info">'
                     html += '<h6 class="product-title text-left">'
-                    html += '<a href="#product">' + myArray[i].name + '</a>'
-                    '</h6>';
-                    html += '<h5 class="brand-name" id="brandName">' + myArray[i].brand + '</h5>';
-                    html += '<h5 class="brand-name">' + myArray[i].model + '</h5>'
-                    html += '<h4 class="pro-price">SAR.' + myArray[i].price + '.00</h4>'
-                    '<form>'
-                    html += '<button type="button" name="selector" class="btnn mt-3 mb-3" " onclick="btnCart(' + myArray[i].id + ',this)">Add to Cart</button>'
-                    '</form>'
-                    '</div>'
+                    html += '<a href="#product">' + data[i].name + '</span></a>'
+                    html += '</h6>'
+                    html += '<h5 class="brand-name notranslate" id="brandName">' + data[i].brand + '</h5>'
+                    html += '<h5 class="brand-name">' + data[i].model + '</h5>'
+                    html += '<h4 class="pro-price">SAR.' + data[i].price + '.00</h4>'
+                    html += '<form method="POST">'
+                    html += '<button value="' + data[i].id + '" type="button" onclick="btnCart(' + data[i].id + ',this)" class="btnn mt-3 mb-3">Add to Cart</button>'
+                    html += '</form>'
+                    html += '</div>'
+                    html += '</div>'
+                    html += '</div>'
 
-                    '</div>'
-
-
-                    '</div>';
 
                     target.append(html)
                 });
@@ -166,7 +163,7 @@ function btnCart(productId, thisProp) {
     var sessionid = $("#sessionId").val();
 
     data = {
-        'session':sessionid,
+        'session': sessionid,
         'product_id': productId,
         csrfmiddlewaretoken: csrftoken
     }
