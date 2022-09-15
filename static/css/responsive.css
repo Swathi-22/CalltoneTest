@@ -666,7 +666,8 @@ h4 {
   line-height: 20px;
 }
 p {
- font-size: 12px;
+ font-size: 16px;
+ font-family: 'Almarai', sans-serif;
 }
 .plr-185 {
   padding: 0px;
@@ -680,6 +681,9 @@ p {
 }
 .mb-40 {
   margin-bottom: 30px;
+}
+.mt-40 {
+  margin-top: 55px;
 }
 .section-title h2 {
   font-size: 16px;

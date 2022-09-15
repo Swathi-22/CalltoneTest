@@ -61,11 +61,12 @@
 *************************/
 body {
   background: #fff;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Almarai', sans-serif !important;
   font-weight: normal;
   font-style: normal;
   font-size: 14px;
   line-height: 24px;
+  
 }
 .img{
   max-width: 100%;
@@ -115,7 +116,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Almarai', sans-serif;
   font-weight: normal;
   color: #434343;
   margin-top: 0px;
@@ -157,7 +158,7 @@ li {
   list-style: none; 
 }
 p {
-  font-size: 13px;
+  font-size: 18px;
   font-weight: normal;
   line-height: 20px;
   color: #999999;
@@ -229,10 +230,10 @@ span.tooltip-content {
   padding: 0.2em 0;
 }
 .g-font-1 {
-  font-family: "Raleway",sans-serif;
+  font-family: 'Almarai', sans-serif;
 }
 .g-font-2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Almarai', sans-serif;
 }
 .font-w-5 {
   font-weight: 500;
@@ -614,7 +615,7 @@ input[type="password"] {
 button {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   border: medium none;
-  font-family: raleway;
+  font-family: 'Almarai', sans-serif;
 }
 select {
   border: 1px solid #eeeeee;

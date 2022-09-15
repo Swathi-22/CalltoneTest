@@ -77,7 +77,8 @@
 /*----------------------------------------
   5. Google Fonts
 ----------------------------------------*/
-@import 'https://fonts.googleapis.com/css?family=Raleway:400,500,600,700|Roboto:400,500,700';
+/* @import 'https://fonts.googleapis.com/css?family=Raleway:400,500,600,700|Roboto:400,500,700'; */
+@import url('http://fonts.cdnfonts.com/css/almarai');
 
 
 form-controll {
@@ -249,7 +250,7 @@ form-controll {
 }
 .pro-price {
   color: #666666;
-  font-family: "Roboto",sans-serif;
+  font-family: 'Almarai', sans-serif;
   font-weight: 400;
   line-height: 20px;
   margin-bottom: 20px;
@@ -319,7 +320,7 @@ form-controll {
   border-radius: 50%;
   color: #999999;
   display: block;
-  font-family: roboto;
+  font-family: 'Almarai', sans-serif;
   font-size: 20px;
   font-weight: 700;
   height: 40px;
@@ -354,7 +355,7 @@ form-controll {
 }
 .ribbon-price span {
   color: #fefefe;
-  font-family: roboto;
+  font-family: 'Almarai', sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 16px;
@@ -699,14 +700,14 @@ transform: scale(1);
   border-bottom: 1px solid #999999;
   color: #999999;
   display: inline-block;
-  font-family: roboto;
+  font-family: 'Almarai', sans-serif;
   font-size: 26px;
   font-weight: 700;
   line-height: 26px;
 }
 .up-comming-time-2 p {
   color: #8a8888;
-  font-family: raleway;
+  font-family: 'Almarai', sans-serif;
   font-weight: 500;
   padding-top: 5px;
   text-transform: uppercase;
@@ -954,7 +955,7 @@ transform: scale(1);
   border: 1px solid #eee;
   color: #999999;
   display: block;
-  font-family: roboto;
+  font-family: 'Almarai', sans-serif;
   font-size: 13px;
   font-weight: 400;
   height: 30px;
@@ -1255,7 +1256,7 @@ transform: scale(1);
 input.cart-plus-minus-box {
   background: transparent none repeat scroll 0 0;
   box-shadow: none;
-  font-family: roboto;
+  font-family: 'Almarai', sans-serif;
   height: 100%;
   margin-bottom: 0;
   padding: 0;
@@ -1302,7 +1303,7 @@ input.cart-plus-minus-box {
   border-radius: 50%;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   display: block;
-  font-family: roboto;
+  font-family: 'Almarai', sans-serif;
   font-size: 20px;
   font-weight: 500;
   height: 50px;
@@ -1328,7 +1329,7 @@ input.cart-plus-minus-box {
 table {width: 100%}
 .table-content table thead th {
   color: #666666;
-  font-family: raleway;
+  font-family: 'Almarai', sans-serif;
   font-size: 13px;
   font-weight: 600;
   line-height: 1;
@@ -1368,7 +1369,7 @@ table {width: 100%}
   margin-bottom: 0;
 }
 .product-price, .product-subtotal {
-  font-family: roboto;
+  font-family: 'Almarai', sans-serif;
   font-size: 16px;
   font-weight: 700;
 }
@@ -1420,7 +1421,7 @@ table {width: 100%}
 }
 .td-title-2 {
   color: #999;
-  font-family: roboto;
+  font-family: 'Almarai', sans-serif;
   font-weight: 500;
   text-align: right;
 }
@@ -1431,7 +1432,7 @@ table {width: 100%}
 }
 .order-total-price {
   color: #ff7f00;
-  font-family: roboto;
+  font-family: 'Almarai', sans-serif;
   font-weight: 700;
   text-align: right;
 }
@@ -1521,7 +1522,7 @@ table {width: 100%}
   font-weight: 500;
 }
 .order-info-list li p {
-  font-family: roboto;
+  font-family: 'Almarai', sans-serif;
   margin-bottom: 0;
 }
 .bill-address > li {
@@ -1603,7 +1604,7 @@ table {width: 100%}
   display: block;
 }
 .meta-date {
-  font-family: roboto;
+  font-family: 'Almarai', sans-serif;
   font-size: 42px;
   font-weight: 500;
   line-height: 30px;
@@ -1988,7 +1989,7 @@ body { top: 0px !important; }
 }
 
 .goog-te-gadget  {
-  font-family: arial;
+  font-family: 'Almarai', sans-serif;
   font-size: 11px;
   color:#ffffff !important;
   white-space: nowrap;

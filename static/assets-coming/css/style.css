@@ -27,7 +27,7 @@ Headers:		'Roboto', sans-serif;
 /* 1. Elements Styling */
 body, html {
   height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Almarai', sans-serif;
   font-size: 14px;
   overflow: hidden;
   position: relative;
@@ -553,7 +553,7 @@ img {
 #active-slider-nav .owl-prev:after, #active-slider-nav .owl-next:after {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-  font-family: 'ElegantIcons';
+  font-family: 'Almarai', sans-serif;
   speak: none;
   font-weight: normal;
   font-variant: normal;
@@ -898,7 +898,7 @@ body.has-active-slider #outer-wrapper #inner-wrapper {
 .gallery-carousel .description:after {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-  font-family: 'ElegantIcons';
+  font-family: 'Almarai', sans-serif;
   speak: none;
   font-weight: normal;
   font-variant: normal;
@@ -938,7 +938,7 @@ body.has-active-slider #outer-wrapper #inner-wrapper {
 .gallery-carousel .owl-controls .owl-nav .owl-prev:after, .gallery-carousel .owl-controls .owl-nav .owl-next:after {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-  font-family: 'ElegantIcons';
+  font-family: 'Almarai', sans-serif;
   speak: none;
   font-weight: normal;
   font-variant: normal;
